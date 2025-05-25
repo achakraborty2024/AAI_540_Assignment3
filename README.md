@@ -1,10 +1,10 @@
-# 🏡 Neighborhood Feature Group with SageMaker Feature Store
+# Neighborhood Feature Group with SageMaker Feature Store
 
 This project demonstrates how to engineer and store rich neighborhood-level features derived from California housing data and Google Maps address metadata using **Amazon SageMaker Feature Store**. These features are designed to improve housing price prediction models by incorporating contextual neighborhood information.
 
 ---
 
-## 📦 Project Overview
+## Project Overview
 
 The goal is to:
 - Join housing data with Google Maps address data
@@ -14,7 +14,7 @@ The goal is to:
 
 ---
 
-## 🛠️ Features Created
+## Features Created
 
 Each neighborhood entry in the feature group includes:
 
@@ -34,7 +34,7 @@ Each neighborhood entry in the feature group includes:
 
 ---
 
-## 🧩 Data Sources
+## Data Sources
 
 - `housing.csv`: California housing data (e.g., from StatLib or similar)
 - `housing_gmaps_data_raw.csv`: Google Maps API results with address metadata
@@ -42,7 +42,7 @@ Each neighborhood entry in the feature group includes:
 
 ---
 
-## 🚀 AWS Workflow
+## AWS Workflow
 
 ### 1. Create Feature Group
 - Define schema using `boto3` (not just high-level SageMaker SDK)
@@ -55,12 +55,12 @@ Each neighborhood entry in the feature group includes:
 - Ensure feature types conform to SageMaker limits
 
 ### 3. Query the Feature Store
-- ✅ Real-time: `get_record()` via `sagemaker-featurestore-runtime`
-- ✅ Batch training: Athena SQL query on the offline store
+- Real-time: `get_record()` via `sagemaker-featurestore-runtime`
+- Batch training: Athena SQL query on the offline store
 
 ---
 
-## 🔍 Sample Query
+## Sample Query
 
 ```python
 featurestore_runtime.get_record(
